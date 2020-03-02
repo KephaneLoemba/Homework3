@@ -9,9 +9,11 @@ let generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", function() {
 
   
-  // Between these curly brackets, add the entire password generating function.
+  // ***Between these curly brackets, add the entire password generating function.***
+
+
+
   // First, we prompt the user to pick a password lenght between 8 and 128 characters.
-  
   
   let pLength = prompt("Enter a length for your password. Length must be a minimum of 8, and maximum of 128 characters.")
   
@@ -34,8 +36,35 @@ generateBtn.addEventListener("click", function() {
       let symBank = ['~','!','@','#','$','%','^','&','*','-','_','+','=']
       let numBank = ['0','1','2','3','4','5','6','7','8','9']
 
+//I create some functions, which will be used in our password generator.
+
+//If 0 of 4 criteria are selected, alert he user that their character selection is invalid.
+
+//If all 4 criteria are selected, run these lines of code to generate the password.
+
+//If 3 of 4 criteria are selected, run one of these:
+
+//If 2 of 4 criteria are selected, run one of these:
+
+//If 1 of 4 criteria are selected, run one of these:
+
+
+
     
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //***don't write anything in between these two/three brackets sections:***
   }
   
   
