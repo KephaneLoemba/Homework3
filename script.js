@@ -39,43 +39,114 @@ generateBtn.addEventListener("click", function() {
 //I create some functions, which will be used in our password generator.
 
 //If 0 of 4 criteria are selected, alert he user that their character selection is invalid.
+if (lower === false && upper === false && symb === false && numb === false){
+  alert("You must select at least one character criteria. Please click 'generate password' to try again.");
+}
+
 
 //If all 4 criteria are selected, run these lines of code to generate the password.
+else {
 
-//If 3 of 4 criteria are selected, run one of these:
+  
+  
+  
 
-//If 2 of 4 criteria are selected, run one of these:
-
-//If 1 of 4 criteria are selected, run one of these:
-
-
-
+  if (lower && upper && symb && numb){
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //***don't write anything in between these two/three brackets sections:***
   }
   
+  //If 3 of 4 criteria are selected, run one of these:
+  if (lower && upper && symb && numb === false){
+    
+  }
   
+  if (lower && upper && symb === false && numb){
+    
+}
+
+if (lower && upper === false && symb && numb){
+  
+}
+
+if (lower === false && upper && symb && numb){
+  
+}
+
+
+
+
+//If 2 of 4 criteria are selected, run one of these:
+if (lower && upper && symb === false && numb === false){
+  
+}
+
+if (lower === false && upper && symb && numb === false){
+  
+}
+
+if (lower === false && upper && symb === false && numb){
+  
+}
+
+if (lower && upper === false && symb === false && numb){
+  
+}
+
+if (lower && upper === false && symb && numb === false){
+  
+}
+
+if (lower === false && upper === false && symb && numb){
+  
+}
+
+
+//If 1 of 4 criteria are selected, run one of these:
+if (lower && upper === false && symb === false && numb === false){
+  
+}
+
+if (lower === false && upper && symb === false && numb === false){
+  
+}
+
+if (lower === false && upper === false && symb && numb === false){
+  
+}
+
+if (lower === false && upper === false && symb === false && numb){
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//This next Curly bracket closes the 'else' section, after the first character selection gate.
+}
+
+//***don't write anything in between these two/three brackets sections:***
+}
+
+
 })
+
+
 
 // Write password to the #password input
 function writePassword() {
   let password = generatePassword();
   let passwordText = document.querySelector("#password");
-
+  
   passwordText.value = password;
-
+  
 }
 

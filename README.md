@@ -1,7 +1,7 @@
-# K.L. Apps | Password generator v.1.0
+# K.L. Apps | Password Generator v.1.0
 
 ***Hello reviewer!***
-Here's a Password generator the I've created!
+Here's a password generator that I've created!
 
 This simple password generator uses some basic Javascript functionality paired with 'click' event listeners to provide a responsive password generating application.
 
