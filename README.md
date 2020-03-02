@@ -13,9 +13,9 @@ The app allows the user to select the criteria that will define the generated pa
     -Password includes special characters
     -Password includes numeric characters
 
-***Restrictions***
-    -The user must select a password length between [8, 128] characters.
-    -The user must select AT LEAST ONE Character type inclusion preference.
+***Restrictions:***
+    The user must select a password length between [8, 128] characters.
+    Also, the user must select AT LEAST ONE character type preference.
 
 Enjoy!
 
