@@ -22,7 +22,7 @@ generateBtn.addEventListener("click", function() {
    } 
     else {
       
-      let lower = confirm("Do you want uppercase characters in your password?");
+      let lower = confirm("Do you want lowercase characters in your password?");
       let upper = confirm("Do you want uppercase characters in your password?");
       let symb = confirm("Do you want symbol characters in your password?");
       let numb = confirm("Do you want numeric characters in your password?");
