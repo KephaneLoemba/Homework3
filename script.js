@@ -125,19 +125,151 @@ else {
   
   //If 3 of 4 criteria are selected, run one of these:
   else if (lower && upper && symb && numb === false){
-    
+    let i = 0;
+    while (i < pLength) {
+  
+      
+      let nextChar = lowerBank[getRdmCharacter(3)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+      if (i < pLength) {
+  
+      
+        let nextChar = symBank[getRdmCharacter(5)];
+        
+        pass += nextChar;
+        
+        console.log(pass)
+        
+        i++;
+      }
+      if (i < pLength) {
+  
+      
+        let nextChar = upperBank[getRdmCharacter(4)];
+        
+        pass += nextChar;
+        
+        console.log(pass)
+        
+        i++;
+      }
+    }   
   }
   
   else if (lower && upper && symb === false && numb){
-   
+    let i = 0;
+    while (i < pLength) {
+  
+      
+      let nextChar = lowerBank[getRdmCharacter(3)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+      if (i < pLength) {
+  
+      
+        let nextChar = upperBank[getRdmCharacter(4)];
+        
+        pass += nextChar;
+        
+        console.log(pass)
+        
+        i++;
+      }
+      if (i < pLength) {
+  
+      
+        let nextChar = numBank[getRdmCharacter(6)];
+        
+        pass += nextChar;
+        
+        console.log(pass)
+        
+        i++;
+      }
+    }    
 }
 
 else if (lower && upper === false && symb && numb){
+  let i = 0;
+  while (i < pLength) {
+
+    
+    let nextChar = numBank[getRdmCharacter(6)];
+    
+    pass += nextChar;
+    
+    console.log(pass)
+    
+    i++;
+    if (i < pLength) {
+
+    
+      let nextChar = symBank[getRdmCharacter(5)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
+    if (i < pLength) {
   
+      
+      let nextChar = lowerBank[getRdmCharacter(3)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
+  }   
 }
 
 else if (lower === false && upper && symb && numb){
+  let i = 0;
+  while (i < pLength) {
+
+    
+    let nextChar = numBank[getRdmCharacter(6)];
+    
+    pass += nextChar;
+    
+    console.log(pass)
+    
+    i++;
+    if (i < pLength) {
+
+    
+      let nextChar = symBank[getRdmCharacter(5)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
+    if (i < pLength) {
   
+      
+      let nextChar = upperBank[getRdmCharacter(4)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
+  }   
 }
 
 
