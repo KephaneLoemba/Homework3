@@ -37,31 +37,50 @@ generateBtn.addEventListener("click", function() {
       let numBank = ['0','1','2','3','4','5','6','7','8','9']
 
 //I create an array for our generated password.
-let pass = [];
+let pass = "";
 
 let x = 0;
 
+
 //I create some functions, which will be used in our password generator.
 function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max) + 1);
+  return Math.floor(Math.random() * Math.floor(max) + 2);
 }
 
 function getRdmCharacter(low = 9) {
   if (low === 3 ) {
     return Math.floor(Math.random() * lowerBank.length);
   }
-  // else if (upp === x){
-  //   return Math.floor(Math.random() * upperBank.length);
-  // }
-  // else if (sum === x){
-  //   return Math.floor(Math.random() * symBank.length);
-  // }
-  // else if (num === x){
-  //   return Math.floor(Math.random() * numBank.length);
-  // }
+  else if (low === 4){
+    return Math.floor(Math.random() * upperBank.length);
+  }
+  else if (low === 5){
+    return Math.floor(Math.random() * symBank.length);
+  }
+  else if (low === 6){
+    return Math.floor(Math.random() * numBank.length);
+  }
    
 }
 
+
+function getRdmBank() {
+  
+  let bee = getRandomInt(4)
+  
+  if(bee === 2){
+    return lowerBank
+  }
+  else if (bee === 3){
+    return upperBank
+  }
+  else if(bee === 4){
+    return symBank
+  }
+  else {
+    return numBank
+  }
+}
 
 //If 0 of 4 criteria are selected, alert he user that their character selection is invalid.
 if (lower === false && upper === false && symb === false && numb === false){
@@ -71,25 +90,34 @@ if (lower === false && upper === false && symb === false && numb === false){
 
 //If all 4 criteria are selected, run these lines of code to generate the password.
 else {
-
   
   
   
-
+  
+  
   if (lower && upper && symb && numb){
     let i = 0;
     while (i < pLength) {
-
+      
       // let x = getRandomInt(4);
-
+      
       // let nextChar = lowerBank[getRdmCharacter(3)];
-
-      let nextChar = lowerBank[getRdmCharacter(3)];
-
-      pass.push(nextChar);
-
+      let thisBank = getRdmBank()
+      
+      function getRdmCharacter4(low = 9) {
+        if (low === 3 ) {
+          return Math.floor(Math.random() * thisBank.length);
+        }
+         
+      }
+      
+      
+      let nextChar = thisBank[getRdmCharacter4 (3)];
+      
+      pass += nextChar;
+      
       console.log(pass)
-
+      
       i++;
       
     }
@@ -117,45 +145,230 @@ else if (lower === false && upper && symb && numb){
 
 //If 2 of 4 criteria are selected, run one of these:
 else if (lower && upper && symb === false && numb === false){
-  
+  let i = 0;
+  while (i < pLength) {
+
+    
+    let nextChar = lowerBank[getRdmCharacter(3)];
+    
+    pass += nextChar;
+    
+    console.log(pass)
+    
+    i++;
+    if (i < pLength) {
+
+    
+      let nextChar = upperBank[getRdmCharacter(4)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
+  }  
 }
 
 else if (lower === false && upper && symb && numb === false){
-  
+  let i = 0;
+  while (i < pLength) {
+
+    
+    let nextChar = upperBank[getRdmCharacter(4)];
+    
+    pass += nextChar;
+    
+    console.log(pass)
+    
+    i++;
+    if (i < pLength) {
+
+    
+      let nextChar = symBank[getRdmCharacter(5)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
+  }  
 }
 
 else if (lower === false && upper && symb === false && numb){
-  
+  let i = 0;
+  while (i < pLength) {
+
+    
+    let nextChar = numBank[getRdmCharacter(6)];
+    
+    pass += nextChar;
+    
+    console.log(pass)
+    
+    i++;
+    if (i < pLength) {
+
+    
+      let nextChar = upperBank[getRdmCharacter(4)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
+  }  
 }
 
 else if (lower && upper === false && symb === false && numb){
-  
+  let i = 0;
+  while (i < pLength) {
+
+    
+    let nextChar = numBank[getRdmCharacter(6)];
+    
+    pass += nextChar;
+    
+    console.log(pass)
+    
+    i++;
+    if (i < pLength) {
+
+    
+      let nextChar = lowerBank[getRdmCharacter(3)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
+  }  
 }
 
 else if (lower && upper === false && symb && numb === false){
-  
+  let i = 0;
+  while (i < pLength) {
+
+    
+    let nextChar = lowerBank[getRdmCharacter(3)];
+    
+    pass += nextChar;
+    
+    console.log(pass)
+    
+    i++;
+    if (i < pLength) {
+
+    
+      let nextChar = symBank[getRdmCharacter(5)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
+  }  
 }
 
 else if (lower === false && upper === false && symb && numb){
-  
+  let i = 0;
+  while (i < pLength) {
+
+    
+    let nextChar = numBank[getRdmCharacter(6)];
+    
+    pass += nextChar;
+    
+    console.log(pass)
+    
+    i++;
+    if (i < pLength) {
+
+    
+      let nextChar = symBank[getRdmCharacter(5)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
+  } 
 }
 
 
 //If 1 of 4 criteria are selected, run one of these:
 else if (lower && upper === false && symb === false && numb === false){
-  
+  let i = 0;
+    while (i < pLength) {
+
+      
+      let nextChar = lowerBank[getRdmCharacter(3)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
 }
 
 else if (lower === false && upper && symb === false && numb === false){
-  
+  let i = 0;
+    while (i < pLength) {
+
+      let thisBank = upperBank
+
+      function getRdmCharacter1(low = 9) {
+        if (low === 4 ) {
+          return Math.floor(Math.random() * thisBank.length);
+        }
+         
+      }
+
+      let nextChar = thisBank[getRdmCharacter1(4)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
 }
 
 else if (lower === false && upper === false && symb && numb === false){
-  
+  let i = 0;
+    while (i < pLength) {
+
+      
+      let nextChar = symBank[getRdmCharacter(5)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+    }
 }
 
 else if (lower === false && upper === false && symb === false && numb){
-  
+  let i = 0;
+    while (i < pLength) {
+
+      
+      let nextChar = numBank[getRdmCharacter(6)];
+      
+      pass += nextChar;
+      
+      console.log(pass)
+      
+      i++;
+      
+    }
 }
 
 
@@ -163,7 +376,8 @@ else if (lower === false && upper === false && symb === false && numb){
 function writePassword() {
   let password = pass
   let passwordText = document.querySelector("#password");
-  
+
+  console.log("password", password)
   passwordText.value = password;
 
 }
